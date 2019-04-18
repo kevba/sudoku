@@ -37,6 +37,8 @@ func (s *Solver) solveCell(cellNumber int) (solved bool) {
 			cell.Value = i
 		}
 
+		PrintReplacing(s.sudoku)
+
 		if s.validator.Validate(s.sudoku) {
 			if s.solveCell(nextCell) {
 				return true
